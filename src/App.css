@@ -1,0 +1,19 @@
+* {
+  color: rgb(21, 21, 22)
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar ul {
+  display: flex;
+  list-style-type: none;
+  gap: 5dvw;
+}
+
+a {
+  text-decoration: none;
+}
