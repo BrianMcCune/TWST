@@ -1,11 +1,24 @@
 * {
-  color: rgb(21, 21, 22)
+  color: rgb(21, 21, 22);
+  box-sizing: border-box;
+}
+
+body {
+  height: 3000px;
+  margin: 0;
 }
 
 .Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 10px;
+  background-color: rgba(238, 241, 250, 0.5);
+  backdrop-filter: blur(20px);
 }
 
 .Navbar ul {
