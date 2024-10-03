@@ -31,3 +31,8 @@ body {
 a {
   text-decoration: none;
 }
+
+.navbar-logo {
+  height: 45px;
+  max-height: 100%;
+}

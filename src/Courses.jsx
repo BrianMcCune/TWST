@@ -25,16 +25,36 @@ const Courses = () => {
     }
   }, [location]);
 
+  const handleCreatePost = async () => {
+    // Example: Post creation API call
+    const response = await fetch('http://localhost:3000/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title: 'New Post',
+        content: 'Post content...',
+      }),
+      credentials: 'include', // Include cookies for session management
+    });
+    const result = await response.json();
+    console.log(result);
+  };
+
   return ( 
     <>
-      This is the Courses Page
-
 
       <div>
         {user ? (
-          <h1>Welcome, {user.displayName}!</h1>
+          <>
+            <h1>Welcome, {user.displayName}!</h1>
+            {user.emails[0].value === 'brianmmccune@gmail.com' && (
+              <button onClick={handleCreatePost}>Create New Post</button>
+            )}
+          </>
         ) : (
-          <h1>Please log in.</h1>
+          <div>This is the Courses Page</div>
         )}
       </div>
     </>

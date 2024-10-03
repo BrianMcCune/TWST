@@ -6,7 +6,6 @@ const Login = () => {
     window.location.href = '/courses'; 
   };
 
-
   return ( 
     <>
       <button onClick={handleGoogleLogin}>Login with Google</button>
