@@ -1,12 +1,10 @@
 * {
-  /* color: rgb(21, 21, 22); */
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding-top: 51px;
-  /* height: 3000px; */
 }
 
 .Navbar {
@@ -18,15 +16,15 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
-  /* background-color: rgba(238, 241, 250, 0.5); */
   background-color: rgba(1, 1, 1);
-  /* backdrop-filter: blur(20px); */
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .Navbar ul {
   display: flex;
   list-style-type: none;
-  gap: 5dvw;
+  gap: 2rem;
 }
 
 li * {
@@ -45,24 +43,28 @@ a {
 .home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  /* gap: 30px; */
+  gap: 2rem;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  /* height: 80dvh; */
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
 }
 
 .title {
   text-align: center;
-  padding: 5dvh 30px;
+  padding: 5vh 2rem;
   font-weight: 600;
-  font-size: 3dvw;
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 .bio {
-  padding: 30px;
-  font-size: 25px;
+  padding: 2rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .container {
@@ -72,24 +74,13 @@ a {
 
 .home img {
   width: 100%;
-  max-height: 85dvh;
   height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: bottom;
+  object-position: bottom left;
   border-radius: 5px;
 }
 
-/* .info {
-  min-height: 200px;
-  border: 2px solid black;
-  text-align: center;
-  align-self: baseline;
-  padding: 5px;
-  margin: 30px 70px;
-  border-radius: 5px;
-  outline: 5px solid red;
-} */
-
 p {
-  font-size: 25px;
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
