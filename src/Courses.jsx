@@ -1,44 +1,72 @@
+import { useState, useEffect } from 'react';
 import './courses.css';
 
 const Courses = () => {
+  const [activeCourse, setActiveCourse] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const course = [
     {
       id: 1,
       image: './course1.jpg',
       description: 'Wilderness Survival Basics',
-      detailedDescription: 'Learn the essential skills needed for basic wilderness survival.'
+      details: 'Learn the fundamentals of wilderness survival, including shelter building, fire making, and foraging for food.',
     },
     {
       id: 2,
       image: './course2.jpg',
       description: 'Essential Wilderness Skills',
-      detailedDescription: 'Master vital skills to thrive in the wilderness environment.'
+      details: 'Develop essential skills for navigating and thriving in the wilderness safely and effectively.',
     },
     {
       id: 3,
       image: './course3.jpg',
       description: 'Advanced Survival Techniques',
-      detailedDescription: 'Explore advanced techniques for survival in extreme conditions.'
-    }
+      details: 'Master advanced techniques including tracking, advanced shelter construction, and emergency first aid.',
+    },
   ];
+
+  const togglePopup = (id) => {
+    if (isMobile) {
+      setActiveCourse(activeCourse === id ? null : id);
+    }
+  };
 
   return ( 
     <div className='courses'>
       <div className='intro-card'>
         <div className='content'>
-          <h2>Hands-on Courses</h2>
+          <h2>Hands on courses</h2>
           <p>Be a part of one of our many in-person courses and start your learning adventure now.</p>
           <button className='cta-button'>Sign Up</button>
         </div>
       </div>
       <div className='card-list'>
         {course.map(item => (
-          <div key={item.id} className='card'>
+          <div 
+            key={item.id} 
+            className='card' 
+            onClick={() => togglePopup(item.id)}
+            onMouseEnter={() => !isMobile && setActiveCourse(item.id)}
+            onMouseLeave={() => !isMobile && setActiveCourse(null)}
+          >
             <img src={item.image} alt={`Image for ${item.description}`} className='course-image' />
             <h3 className='description'>{item.description}</h3>
-            <div className="popup">
-              <p>{item.detailedDescription}</p>
-            </div>
+            {activeCourse === item.id && (
+              <div className="popup">
+                <p>{item.details}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
