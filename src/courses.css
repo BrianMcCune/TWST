@@ -1,9 +1,12 @@
+/* Global styles */
 * {
   box-sizing: border-box;
 }
 
 .courses {
   padding-top: 51px;
+  background-color: #fff5e0;
+  height: 100vh;
 }
 
 .intro-card {
@@ -44,4 +47,65 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1400px;
+}
+
+.card {
+  position: relative;
+  background-color: rgb(240, 248, 255);
+  color: rgb(34, 34, 34);
+  border-radius: 5px;
+  margin: 10px;
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.card > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card .description {
+  padding: 15px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.card:hover .popup {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.popup {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 200px;
+  z-index: 10;
 }
