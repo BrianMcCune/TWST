@@ -23,8 +23,12 @@ const Courses = () => {
 
   return ( 
     <div className='courses'>
-      <div>
-        <h2></h2>
+      <div className='intro-card'>
+        <div className='content'>
+          <h2>Hands on courses</h2>
+          <p>Be a part of one of our many in person courses and start your learning adventure now.</p>
+          <button className='cta-button'>Sign Up</button>
+        </div>
       </div>
       <div className='card-list'>
         {course.map(item => (
