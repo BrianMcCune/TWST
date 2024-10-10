@@ -7,7 +7,7 @@ const Home = () => {
         <div className="bio">
           Build essential survival skills, connect with nature, and learn how to thrive in the wilderness. Prepare for the unexpected with hands-on training.
         </div>
-        <a href="#learn-more" className="cta-button">Learn More</a>
+        <a href="about" className="cta-button">Learn More</a>
       </div>
     </div>
   );
