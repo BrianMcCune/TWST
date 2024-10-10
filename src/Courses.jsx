@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './courses.css';
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   const [activeCourse, setActiveCourse] = useState(null);
@@ -48,7 +49,7 @@ const Courses = () => {
         <div className='content'>
           <h2>Hands on courses</h2>
           <p>Be a part of one of our many in-person courses at TWST and start your learning adventure now.</p>
-          <a href="contact" className="cta-button">Sign Up</a>
+          <Link to="/contact" className="cta-button">Sign Up</Link>
         </div>
       </div>
       <div className='card-list'>
