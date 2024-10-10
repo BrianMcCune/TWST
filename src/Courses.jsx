@@ -1,12 +1,21 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import './courses.css';
 
 const Courses = () => {
   const [activeCourse, setActiveCourse] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  const course = useMemo(() => [
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const course = [
     {
       id: 1,
       image: './course1.jpg',
@@ -25,49 +34,13 @@ const Courses = () => {
       description: 'Advanced Survival Techniques',
       details: 'Master advanced techniques including tracking, advanced shelter construction, and emergency first aid.',
     },
-  ], []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const preloadImages = async () => {
-      const promises = course.map(item => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.src = item.image;
-          img.onload = resolve;
-          img.onerror = reject;
-        });
-      });
-
-      try {
-        await Promise.all(promises);
-        setImagesLoaded(true);
-      } catch (error) {
-        console.error("Error loading images", error);
-      }
-    };
-
-    preloadImages();
-  }, [course]);
+  ];
 
   const togglePopup = (id) => {
     if (isMobile) {
       setActiveCourse(activeCourse === id ? null : id);
     }
   };
-
-  if (!imagesLoaded) {
-    return <div>Loading images...</div>;
-  }
 
   return (
     <div className='courses'>
@@ -99,6 +72,6 @@ const Courses = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Courses;
