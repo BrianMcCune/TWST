@@ -1,21 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import './courses.css';
 
 const Courses = () => {
   const [activeCourse, setActiveCourse] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const course = [
+  const course = useMemo(() => [
     {
       id: 1,
       image: './course1.jpg',
@@ -34,7 +25,39 @@ const Courses = () => {
       description: 'Advanced Survival Techniques',
       details: 'Master advanced techniques including tracking, advanced shelter construction, and emergency first aid.',
     },
-  ];
+  ], []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const preloadImages = async () => {
+      const promises = course.map(item => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = item.image;
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      });
+
+      try {
+        await Promise.all(promises);
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error("Error loading images", error);
+      }
+    };
+
+    preloadImages();
+  }, [course]);
 
   const togglePopup = (id) => {
     if (isMobile) {
@@ -42,7 +65,11 @@ const Courses = () => {
     }
   };
 
-  return ( 
+  if (!imagesLoaded) {
+    return <div>Loading images...</div>;
+  }
+
+  return (
     <div className='courses'>
       <div className='intro-card'>
         <div className='content'>
@@ -72,6 +99,6 @@ const Courses = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Courses;
