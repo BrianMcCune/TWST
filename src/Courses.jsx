@@ -7,10 +7,10 @@ const Courses = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Set initial state
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -47,7 +47,7 @@ const Courses = () => {
       <div className='intro-card'>
         <div className='content'>
           <h2>Hands on courses</h2>
-          <p>Be a part of one of our many in-person courses and start your learning adventure now.</p>
+          <p>Be a part of one of our many in-person courses at TWST and start your learning adventure now.</p>
           <a href="contact" className="cta-button">Sign Up</a>
         </div>
       </div>

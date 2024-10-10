@@ -19,6 +19,7 @@
 .image-container img {
   width: 100%;
   object-fit: contain;
+  border-radius: 2%;
 }
 
 @media (max-width: 768px) {
