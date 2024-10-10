@@ -16,6 +16,10 @@
   padding: 30px;
 }
 
+.mission-statement h2, .expectations h2 {
+  margin-bottom: 20px;
+}
+
 .image-container img {
   width: 100%;
   object-fit: contain;
