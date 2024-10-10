@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div className="home">
-      <img src="./fireplace.png" alt="Campfire" className="home-image" />
+      <img loading="lazy" src="./fireplace.png" alt="Campfire" className="home-image" />
       <div className="home-text">
         <div className="title">Texas Wilderness Survival Training</div>
         <div className="bio">

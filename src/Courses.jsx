@@ -60,7 +60,7 @@ const Courses = () => {
             onMouseEnter={() => !isMobile && setActiveCourse(item.id)}
             onMouseLeave={() => !isMobile && setActiveCourse(null)}
           >
-            <img src={item.image} alt={`Image for ${item.description}`} className='course-image' />
+            <img loading="lazy" src={item.image} alt={`Image for ${item.description}`} className='course-image' />
             <h3 className='description'>{item.description}</h3>
             {activeCourse === item.id && (
               <div className="popup">

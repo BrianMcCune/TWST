@@ -4,7 +4,7 @@ const Contact = () => {
   return ( 
     <div className="contact">
       <div className="tent-container">
-        <img src="./tent.jpg" className="tent" alt="Tent" />
+        <img loading="lazy" src="./tent.jpg" className="tent" alt="Tent" />
         <div className="overlay-text">How Can We Help</div>
       </div>
       <div className="information">

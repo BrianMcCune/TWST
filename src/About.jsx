@@ -11,12 +11,12 @@ const About = () => {
           </p>
         </div>
         <div className="image-container">
-          <img src="./placeholder.jpg" alt='instructors'/>
+          <img loading="lazy" src="./placeholder.jpg" alt='instructors'/>
         </div>
       </div>
       <div className='expectations-container'>
         <div className='image-container'>
-          <img src="./placeholder.jpg" alt='instructors'/>
+          <img loading="lazy" src="./placeholder.jpg" alt='instructors'/>
         </div>
         <div className="expectations">
           <h2>What to Expect</h2>
