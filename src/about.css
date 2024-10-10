@@ -1,7 +1,7 @@
 .about {
   padding-top: 51px;
   background-color: #fff5e0;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .mission-container,
