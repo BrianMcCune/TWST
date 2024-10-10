@@ -1,0 +1,44 @@
+.about {
+  padding-top: 51px;
+  background-color: #fff5e0;
+}
+
+.mission-container,
+.expectations-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.mission-container > div,
+.expectations-container > div {
+  flex: 1;
+  padding: 30px;
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .mission-container,
+  .expectations-container {
+    flex-direction: column;
+  }
+
+  .mission-container > div,
+  .expectations-container > div {
+    padding: 15px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .mission-statement, .expectations {
+    text-align: center;
+  }
+}
