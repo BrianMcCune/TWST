@@ -5,7 +5,6 @@ import Home from './Home';
 import Courses from './Courses';
 import Contact from './Contact';
 import About from './About';
-import Signup from './Signup';
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
         <Route path='/courses' element={<Courses />}/>
         <Route path='/contact' element={<Contact />}/>
         <Route path='/about' element={<About />}/>
-        <Route path='/signup' element={<Signup />}/>
       </Routes >
     </>
   )

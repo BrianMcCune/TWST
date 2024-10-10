@@ -1,0 +1,76 @@
+.contact {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tent-container {
+  position: relative;
+  height: 60%;
+  width: 100%;
+}
+
+.tent {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.information {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.information > div {
+  flex: 1 1 300px;
+  padding: 10% 15px 20px 15px;
+  text-align: center;
+}
+
+.join {
+  background-color: rgb(255, 239, 204);
+}
+
+.enroll {
+  background-color: rgb(255, 224, 178);
+}
+
+.more-info {
+  background-color: rgb(255, 246, 227);
+}
+
+.information h2 {
+  font-size: 1.75rem;
+}
+
+.join h2, .enroll h2, .more-info p {
+  margin-bottom: 10px;
+}
+
+.more-info i {
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .information > div {
+    padding-bottom: 20px;
+  }
+}
