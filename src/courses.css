@@ -1,8 +1,12 @@
 .courses {
   padding-top: 51px;
+  padding-left: 7vw;
+  padding-right: 7vw;
   background-color: #fff5e0;
   height: fit-content;
   min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .intro-card {
@@ -50,7 +54,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px auto;
-  max-width: 1400px;
+  max-width: 100%;
 }
 
 .card {
@@ -59,11 +63,14 @@
   color: rgb(34, 34, 34);
   border-radius: 5px;
   margin: 10px;
-  flex: 1 1 calc(300px - 20px);
+  flex: 1 1 calc(250px - 20px);
   text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   will-change: transform, opacity;
+  z-index: 1;
+  min-width: 250px;
+  max-width: 100%;
 }
 
 .card > img {
@@ -117,7 +124,6 @@
   }
 
   .card {
-    flex: 1 1 100%;
     margin: 10px 0;
     width: calc(100vw - 40px);
   }
