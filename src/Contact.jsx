@@ -6,9 +6,9 @@ const Contact = () => {
 
   useGSAP(
     () => {
-        gsap.to('.tent-container > img', { opacity: 1, duration: 1.5 });
+        gsap.to('.tent-container > img', { opacity: 1, duration: 1.5, delay: 0.5 });
     }
-);
+  );
 
   return ( 
     <div className="contact">
