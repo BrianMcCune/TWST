@@ -4,6 +4,7 @@
   padding-right: calc(7vw - 20px);
   background-color: #fff5e0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .mission-container,

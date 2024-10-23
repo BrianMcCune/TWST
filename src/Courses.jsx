@@ -1,10 +1,22 @@
 import { useState, useEffect } from 'react';
 import './courses.css';
 import { Link } from "react-router-dom";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 const Courses = () => {
   const [activeCourse, setActiveCourse] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+
+  useGSAP(
+    () => {
+        gsap.to('.card', { opacity: 1, duration: 2,  delay: 0.5});
+        gsap.to('.intro-card', { opacity: 1, duration: 2 });
+    }
+);
+
 
   useEffect(() => {
     const handleResize = () => {

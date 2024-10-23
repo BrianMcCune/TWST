@@ -1,6 +1,15 @@
 import './contact.css';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Contact = () => {
+
+  useGSAP(
+    () => {
+        gsap.to('.tent-container > img', { opacity: 1, duration: 1.5 });
+    }
+);
+
   return ( 
     <div className="contact">
       <div className="tent-container">

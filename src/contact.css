@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+.tent-container > img {
+  opacity: 0.5;
+}
+
 .tent {
   object-fit: cover;
   height: 100%;

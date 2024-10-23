@@ -1,6 +1,17 @@
 import './about.css';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const About = () => {
+
+  useGSAP(
+    () => {
+        gsap.from('.mission-container > .image-container', { opacity:0, x: 500, duration: 1 });
+
+        gsap.from('.expectations-container > .image-container', { opacity:0, x: -500, duration: 1 });
+    }
+);
+
   return ( 
     <div className="about">
       <div className='mission-container'>
