@@ -12,8 +12,9 @@ const Courses = () => {
 
   useGSAP(
     () => {
-        gsap.to('.intro-card', { opacity: 1, duration: 2,  delay: 0.5});
-        gsap.to('.card', { opacity: 1, duration: 2, delay: 1});
+      gsap.to('.intro-card', { opacity: 1, duration: 1.5, delay: 0.5 });
+      gsap.to('.card', { opacity: 1, duration: 1.5, delay: 1 });
+      
     }
 );
 
