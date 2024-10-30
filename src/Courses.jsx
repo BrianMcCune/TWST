@@ -1,26 +1,26 @@
 import { useState, useEffect } from 'react';
 import './courses.css';
 import { Link } from "react-router-dom";
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+// import gsap from 'gsap';
+// import { useGSAP } from '@gsap/react';
 import course1 from './assets/images/course1.jpg';
 import course2 from './assets/images/course2.jpg';
 import course3 from './assets/images/course3.jpg';
 
 
-gsap.registerPlugin(useGSAP);
+// gsap.registerPlugin(useGSAP);
 
 const Courses = () => {
   const [activeCourse, setActiveCourse] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
-  useGSAP(
-    () => {
-      gsap.to('.intro-card', { opacity: 1, duration: 0.75, delay: 0.25 });
-      gsap.to('.card', { opacity: 1, duration: 0.75, delay: 0.5 });
+//   useGSAP(
+//     () => {
+//       gsap.to('.intro-card', { opacity: 1, duration: 0.75, delay: 0.25 });
+//       gsap.to('.card', { opacity: 1, duration: 0.75, delay: 0.5 });
       
-    }
-);
+//     }
+// );
 
 
   useEffect(() => {
