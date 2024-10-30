@@ -8,9 +8,9 @@ const About = () => {
 
   useGSAP(
     () => {
-        gsap.from('.mission-container > .image-container', { opacity:0, x: 200, duration: 1 });
+        gsap.from('.mission-container > .image-container', { opacity:0, x: 200, duration: 1, delay: 0.25 });
 
-        gsap.from('.expectations-container > .image-container', { opacity:0, x: -200, duration: 1 });
+        gsap.from('.expectations-container > .image-container', { opacity:0, x: -200, duration: 1, delay: 0.25 });
     }
 );
 
