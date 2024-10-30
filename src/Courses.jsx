@@ -3,6 +3,10 @@ import './courses.css';
 import { Link } from "react-router-dom";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import course1 from './assets/images/course1.jpg';
+import course2 from './assets/images/course2.jpg';
+import course3 from './assets/images/course3.jpg';
+
 
 gsap.registerPlugin(useGSAP);
 
@@ -32,19 +36,19 @@ const Courses = () => {
   const course = [
     {
       id: 1,
-      image: './course1.jpg',
+      image: course1,
       description: 'Wilderness Survival Basics',
       details: 'Learn the fundamentals of wilderness survival, including shelter building, fire making, and foraging for food.',
     },
     {
       id: 2,
-      image: './course2.jpg',
+      image: course2,
       description: 'Essential Wilderness Skills',
       details: 'Develop essential skills for navigating and thriving in the wilderness safely and effectively.',
     },
     {
       id: 3,
-      image: './course3.jpg',
+      image: course3,
       description: 'Advanced Survival Techniques',
       details: 'Master advanced techniques including tracking, advanced shelter construction, and emergency first aid.',
     },
@@ -74,7 +78,7 @@ const Courses = () => {
             onMouseEnter={() => !isMobile && setActiveCourse(item.id)}
             onMouseLeave={() => !isMobile && setActiveCourse(null)}
           >
-            <img loading="lazy" src={item.image} alt={`Image for ${item.description}`} className='course-image' />
+            <img src={item.image} alt={`Image for ${item.description}`} className='course-image' />
             <h3 className='description'>{item.description}</h3>
             {activeCourse === item.id && (
               <div className="popup">

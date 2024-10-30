@@ -1,3 +1,5 @@
+import tent from './assets/images/tent.jpg';
+
 import './contact.css';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -13,7 +15,7 @@ const Contact = () => {
   return ( 
     <div className="contact">
       <div className="tent-container">
-        <img loading="lazy" src="./tent.jpg" className="tent" alt="Tent" />
+        <img loading="lazy" src={tent} className="tent" alt="Tent" />
         <div className="overlay-text">How Can We Help</div>
       </div>
       <div className="information">

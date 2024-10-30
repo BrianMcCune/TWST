@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import fireplace from './assets/images/fireplace.png';
+
 
 const Home = () => {
   return (
     <div className="home">
-      <img loading="lazy" src="./fireplace.png" alt="Campfire" className="home-image" />
+      <img loading="lazy" src={fireplace} alt="Campfire" className="home-image" />
       <div className="home-text">
         <div className="title">Texas Wilderness Survival Training</div>
         <div className="bio">
