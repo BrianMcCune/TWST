@@ -4,8 +4,24 @@
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: bisque;
+  overflow: hidden;
   z-index: 9999;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: bisque;
+}
+
+.left-curtain {
+  left: 0;
+}
+
+.right-curtain {
+  right: 0;
 }
 
 .compass {
@@ -13,4 +29,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.line-left {
+  background-color: black;
+  width: 5px;
+  height: 100vh;
+  position: absolute;
+  left: 10vw;
+}
+
+.line-right {
+  background-color: black;
+  width: 5px;
+  height: 100vh;
+  position: absolute;
+  right: 10vw;
+}
+
+.line-center1, .line-center2 {
+  background-color: black;
+  width: 2px;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  z-index: 0;
 }
