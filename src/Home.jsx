@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import fireplace from './assets/images/fireplace.png';
+import Loading from "./Loading";
 
 
 const Home = () => {
   return (
     <div className="home">
+      <Loading />
       <img loading="lazy" src={fireplace} alt="Campfire" className="home-image" />
       <div className="home-text">
         <div className="title">Texas Wilderness Survival Training</div>

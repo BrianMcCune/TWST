@@ -1,0 +1,9 @@
+.loading {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: bisque;
+  z-index: 9999;
+}
