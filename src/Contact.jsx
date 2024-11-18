@@ -9,6 +9,13 @@ const Contact = () => {
   useGSAP(
     () => {
         gsap.to('.tent-container > img', { opacity: 1, duration: 1.5, delay: 0.25 });
+
+        gsap.to('.underline', {
+          width: '100%',
+          duration: 1.4,
+          ease: 'expo.inout',
+          delay: 1.5
+        });
     }
   );
 

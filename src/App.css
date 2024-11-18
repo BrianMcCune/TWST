@@ -42,6 +42,14 @@ h1, h2, h3, h4, h5, h6 {
   gap: 2rem;
 }
 
+.underline {
+  position: absolute;
+  background-color: #fff5e0;
+  height: 2px;
+  left: 0;
+  top: 51px;
+}
+
 li * {
   color: white;
 }

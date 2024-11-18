@@ -16,7 +16,7 @@ const Loading = () => {
         scaleY: 0,
         delay: 1,
         duration: .6,
-        ease: "power1.out",
+        ease: "expo.inout",
       })
 
       gsap.to ('.line-right, .line-center2', {
@@ -24,25 +24,25 @@ const Loading = () => {
         scaleY: 0,
         delay: 1,
         duration: 0.8,
-        ease: "power1.out",
+        ease: "expo.inout",
       })
 
         gsap.fromTo('.dial', {
           rotation: -45,
           transformOrigin:"center center",
         }, { 
-          rotation: 315,
-          duration: 0.8,
+          rotation: 325,
+          duration: 1,
           transformOrigin:"center center",
           delay: 1,
-          ease: "power1.out",
+          ease: "expo.inout",
          })
 
          gsap.to('.compass', {
           autoAlpha: 0,
-          delay: 1.3,
-          duration: 0.6,
-          ease: "power1.out",
+          delay: 1.4,
+          duration: 0.8,
+          ease: "power1.in",
          })
 
          gsap.to('.left-curtain', {
@@ -63,6 +63,13 @@ const Loading = () => {
           delay: 3,
           duration: 0.1
          })
+
+         gsap.to('.underline', {
+          width: '100%',
+          duration: 0.8,
+          ease: 'expo.inout',
+          delay: 3
+        });
     }
 )
 
