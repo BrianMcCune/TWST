@@ -24,7 +24,7 @@ const Home = () => {
 
 
   useEffect(() => {
-    sessionStorage.clear();
+    // sessionStorage.clear();
     console.log(sessionStorage.getItem('hasPlayedAnimation'));
     const hasPlayed = sessionStorage.getItem('hasPlayedAnimation')
     if (hasPlayed === null) {
