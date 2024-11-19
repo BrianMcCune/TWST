@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import fireplace from './assets/images/fireplace.png';
+import fireplace from './assets/images/fireplace.jpg';
 import Loading from "./Loading";
 import { useState, useEffect } from 'react';
 import gsap from 'gsap';
