@@ -2,10 +2,27 @@ import './loading.css';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Compass from './compass';
+import { useState, useEffect } from 'react';
 
 gsap.registerPlugin(useGSAP);
 
 const Loading = () => {
+
+  
+  const [shouldPlayAnimation, setShouldPlayAnimation] = useState(false)
+  // const location = useLocation();
+
+  useEffect(() => {
+    // sessionStorage.clear();
+    console.log(sessionStorage.getItem('hasPlayedAnimation'));
+    const hasPlayed = sessionStorage.getItem('hasPlayedAnimation')
+    if (hasPlayed === null) {
+      setShouldPlayAnimation(true)
+      sessionStorage.setItem('hasPlayedAnimation', 'true')
+    } else {
+      setShouldPlayAnimation(false)
+    }
+  }, [])
 
   useGSAP(
     () => {
@@ -74,17 +91,21 @@ const Loading = () => {
 )
 
 
-  return ( 
-    <div className='loading'>
-      <div className="curtain left-curtain"></div>
-      <div className="curtain right-curtain"></div>
-      <Compass />
-      <div className='line-left'></div>
-      <div className='line-center1'></div>
-      <div className='line-center2'></div>
-      <div className='line-right'></div>
-    </div>
-   );
-}
+return (
+  shouldPlayAnimation && (
+    // <div className="loading">
+    //   <div className="curtain left-curtain"></div>
+    //   <div className="curtain right-curtain"></div>
+    //   <Compass />
+    //   <div className="line-left"></div>
+    //   <div className="line-center1"></div>
+    //   <div className="line-center2"></div>
+    //   <div className="line-right"></div>
+    // </div>
+    <div>hi</div>
+  )
+);
+};
+
  
 export default Loading;
