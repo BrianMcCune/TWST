@@ -12,6 +12,7 @@ import course3 from './assets/images/course3.jpg';
 
 const Courses = () => {
 
+  const [loadedmain, setLoadedmain] = useState(false)
   const [loaded, setLoaded] = useState(false)
 
   const handleLoad = () => {
@@ -31,6 +32,11 @@ const Courses = () => {
 
 
   useEffect(() => {
+
+    const img = new Image();
+    img.src = './assets/images/animal.jpg'
+    img.onload = setLoadedmain(true)
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -69,7 +75,7 @@ const Courses = () => {
 
   return (
     <div className='courses'>
-      <div className='intro-card'>
+      <div className={`intro-card ${!loadedmain ? 'lazy-img' : ''}`}>
         <div className='content'>
           <h2>Hands on courses</h2>
           <p>Be a part of one of our many in-person courses at TWST and start your learning adventure now.</p>
