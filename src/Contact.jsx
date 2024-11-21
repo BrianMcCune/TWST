@@ -1,10 +1,16 @@
 import tent from './assets/images/tent.jpg';
-
+import { useState } from 'react';
 import './contact.css';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 const Contact = () => {
+
+  const [loaded, setLoaded] = useState(false)
+
+  const handleLoad = () => {
+    setLoaded(true)
+  }
 
   useGSAP(
     () => {
@@ -22,7 +28,7 @@ const Contact = () => {
   return ( 
     <div className="contact">
       <div className="tent-container">
-        <img loading="lazy" src={tent} className="tent" alt="Tent" />
+        <img className={`tent ${!loaded ? 'lazy-img' : ''}`} onLoad={handleLoad} src={tent} alt="Tent" />
         <div className="overlay-text">How Can We Help</div>
       </div>
       <div className="information">

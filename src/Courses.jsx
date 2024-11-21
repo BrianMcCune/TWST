@@ -11,6 +11,13 @@ import course3 from './assets/images/course3.jpg';
 // gsap.registerPlugin(useGSAP);
 
 const Courses = () => {
+
+  const [loaded, setLoaded] = useState(false)
+
+  const handleLoad = () => {
+    setLoaded(true)
+  }
+
   const [activeCourse, setActiveCourse] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -78,7 +85,7 @@ const Courses = () => {
             onMouseEnter={() => !isMobile && setActiveCourse(item.id)}
             onMouseLeave={() => !isMobile && setActiveCourse(null)}
           >
-            <img src={item.image} alt={`Image for ${item.description}`} className='course-image' />
+            <img src={item.image} alt={`Image for ${item.description}`} className={`course-image ${!loaded ? 'lazy-img' : ''}`} onLoad={handleLoad} />
             <h3 className='description'>{item.description}</h3>
             {activeCourse === item.id && (
               <div className="popup">

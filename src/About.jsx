@@ -3,8 +3,15 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import selfimage from './assets/images/selfimage.jpg';
 import camping from './assets/images/camping.jpg';
+import { useState } from 'react';
 
 const About = () => {
+
+  const [loaded, setLoaded] = useState(false)
+
+  const handleLoad = () => {
+    setLoaded(true)
+  }
 
   useGSAP(
     () => {
@@ -24,12 +31,12 @@ const About = () => {
           </p>
         </div>
         <div className="image-container">
-          <img src={selfimage} alt='instructors'/>
+          <img className={`${!loaded ? 'lazy-img' : ''}`} onLoad={handleLoad} src={selfimage} alt='instructors'/>
         </div>
       </div>
       <div className='expectations-container'>
         <div className='image-container'>
-          <img src={camping} alt='instructors'/>
+          <img className={`${!loaded ? 'lazy-img' : ''}`} onLoad={handleLoad} src={camping} alt='instructors'/>
         </div>
         <div className="expectations">
           <h2>What to Expect</h2>
