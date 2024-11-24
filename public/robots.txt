@@ -1,0 +1,14 @@
+# Allow all search engines to crawl the main site
+User-agent: *
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /api/
+
+# Allow specific pages to be indexed
+Allow: /
+
+# Block any dynamically generated query strings (optional)
+Disallow: /*?
+
+# Sitemap location for search engines
+Sitemap: https://twstsurvival.com/sitemap.xml
