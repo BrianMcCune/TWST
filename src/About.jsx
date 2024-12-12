@@ -41,7 +41,7 @@ const About = () => {
         <div className="expectations">
           <h2>What to Expect</h2>
           <p>
-            Join us for an immersive three-day wilderness survival course in [Location], Texas. Under the guidance of our experienced instructor, a retired military professional with [X] years of wilderness survival expertise, you’ll gain practical skills essential for thriving in the outdoors. Expect hands-on training in shelter building, foraging, and navigation, all designed to enhance your confidence and appreciation for nature. Prepare for an unforgettable adventure!
+            Join us for an immersive three-day wilderness survival course in Texas. Under the guidance of our experienced instructor. Bert has always had a deep interest in the outdoors, including hunting, fishing, and camping, from a young age. This passion eventually led to a career in the Army, where they served for over 20 years on active duty, retiring after a distinguished career that included assignments in various countries around the world. Now retired, the instructor dedicates their time to refining outdoor skills and sharing this expertise with others.
           </p>
         </div>
       </div>
