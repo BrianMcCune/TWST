@@ -115,7 +115,7 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease;
-  width: 200px;
+  width: 500px;
   z-index: 10;
 }
 

@@ -51,19 +51,19 @@ const Courses = () => {
       id: 1,
       image: course1,
       description: 'Wilderness Survival Basics',
-      details: 'Learn the fundamentals of wilderness survival, including shelter building, fire making, and foraging for food.',
+      details: "This class provides a solid foundation in outdoor living and survival skills. You'll learn what essential items to carry and the reasons behind each choice. The course covers techniques for controlling core body temperature by building various types of shelters, starting and maintaining fires in tough conditions, and locating and purifying drinking water. Basic navigation skills are also part of the curriculum. The physical demands are minimal, though some walking is involved. The class is designed to be relaxed and hands-on, with a focus on using your primary cutting tool throughout the activities. You'll complete small tasks at different times to practice and apply what you've learned.",
     },
     {
       id: 2,
       image: course2,
       description: 'Essential Wilderness Skills',
-      details: 'Develop essential skills for navigating and thriving in the wilderness safely and effectively.',
+      details: "In Level 2, you'll put everything learned in Level 1 into practice. The gear list is limited, and the physical demands are slightly more challenging. This course focuses on primitive skills that require minimal equipment. You'll rely on the gear you’re allowed to bring, cook your own meals over an open fire, and practice advanced techniques like primitive trapping, shelter building, and starting fires using friction methods.",
     },
     {
       id: 3,
       image: course3,
       description: 'Advanced Survival Techniques',
-      details: 'Master advanced techniques including tracking, advanced shelter construction, and emergency first aid.',
+      details: 'to be determined',
     },
   ];
 
