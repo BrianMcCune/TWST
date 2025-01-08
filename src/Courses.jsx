@@ -51,7 +51,7 @@ const Courses = () => {
       id: 1,
       image: course1,
       description: 'Wilderness Survival Basics',
-      details: "This class provides a solid foundation in outdoor living and survival skills. You'll learn what essential items to carry and the reasons behind each choice. The course covers building various types of shelters, starting fires in tough conditions, and locating/purifying drinking water. Basic navigation skills are also included. The physical demands are minimal, though some walking is involved. The class is designed to be relaxed and hands-on, with a focus on using your primary cutting tool throughout the activities. You'll complete small tasks at different times to practice and apply what you've learned.",
+      details: "This class covers essential outdoor survival skills, including what to carry and why. You'll learn shelter building, fire starting in tough conditions, and how to locate and purify drinking water. Basic navigation is also covered. The course is low-impact, with some walking involved. It's hands-on, with a focus on using your primary cutting tool for various tasks to apply your skills.",
     },
     {
       id: 2,
