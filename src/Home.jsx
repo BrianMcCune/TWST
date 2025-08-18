@@ -4,6 +4,7 @@ import Loading from "./Loading";
 import { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
+import NextClass from "./NextClass";
 
 
 
@@ -50,6 +51,7 @@ const Home = () => {
         </div>
         <Link to="/about" className="cta-button">Learn More</Link>
       </div>
+      <NextClass />
     </div>
   );
 };
