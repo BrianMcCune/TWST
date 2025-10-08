@@ -1,5 +1,5 @@
 .contact {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -9,7 +9,8 @@
 
 .tent-container {
   position: relative;
-  height: 60%;
+  /* height: 60%; */
+  height: calc(100vh / 1.5);
   width: 100%;
 }
 
@@ -71,6 +72,31 @@
 
 .more-info i {
   margin-right: 15px;
+}
+
+.form-container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+}
+
+textarea {
+  width: 400px;
+  height: 250px;
 }
 
 @media (max-width: 768px) {
